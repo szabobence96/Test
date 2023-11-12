@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    background-color: #f7f7f7;
+
+
+    .left-side {
+        width: 50vw;
+        float: left;
+
+        .form-container {
+            background-color: #ffffff;
+            position: absolute;
+            top: 45%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+
+            .left-side-header {
+                font-size: 30px;
+                line-height: 30px;
+                color: #757575;
+                font-weight: 500;
+                margin-bottom: 12px;
+            }
+
+            .left-side-text-h6 {
+                font-size: 14px;
+                color: #A1A1A1;
+                font-weight: 500;
+                margin-bottom: 70px;
+            }
+
+            .input-box {
+                position: relative;
+
+                .input-label {
+                    color: #a1a1a1;
+                    position: absolute;
+                    pointer-events: none;
+                    transition: all 0.3s ease;
+                    transform-origin: 0% 100%;
+                    left: 0;
+                    top: -20px;
+                }
+
+                .input {
+                    border: none;
+                    border-bottom: 1px solid #A1A1A1;
+                    outline: none;
+                    font-size: 14px;
+                    margin-bottom: 60px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding-bottom: 10px;
+                    position: relative;
+                    color: #757575;
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                        border-bottom: .1rem solid #4A90E2;
+                        caret-color: #0a96a3;
+
+
+                        +.input-label {
+                            color: #4a90e2;
+                        }
+                    }
+                }
+
+                .eye-icon {
+                    position: absolute;
+                    right: 20px;
+                    cursor: pointer;
+                    width: 20px;
+                    height: 15px;
+                    z-index: 5;
+                }
+
+                .password-strength-meter {
+                    display: flex;
+                    flex-direction: column-reverse; // Lentről felfelé
+                    position: absolute;
+                    right: 0;
+                    bottom: 65px;
+
+                    .dot {
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        margin: 2px 0;
+                        background-color: #e0e0e0; // Alapértelmezett szín
+                    }
+
+                    .weak {
+                        background-color: #cd4146;
+                    }
+
+                    .medium {
+                        background-color: #f9c466;
+                    }
+
+                    .strong {
+                        background-color: rgb(255, 255, 5);
+                    }
+
+                    .very-strong {
+                        background-color: rgb(0, 211, 0);
+                    }
+                }
+            }
+
+            .checkbox-container {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                bottom: 85px;
+
+                .checkbox {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 13px;
+                    height: 13px;
+                    border: 2px solid #3498db;
+                    border-radius: 50%;
+                    outline: none;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+
+                .checkbox:checked {
+                    background-color: #3498db;
+                }
+
+                .checkbox-h5 {
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #a1a1a1;
+                    font-weight: 400;
+                }
+
+
+            }
+
+            .sign-up-btn {
+                color: #ffffff;
+                float: right;
+                cursor: pointer;
+                padding: 10px 30px 10px 30px;
+                border-radius: 4px;
+                border: 0px;
+                background-color: #4a90e2;
+                transition: background-color 0.3s ease;
+            }
+
+            .sign-up-btn:hover {
+                background-color: #75a3d9;
+            }
+
+            .sign-up-btn:active {
+                background-color: #2269b9;
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: -70px;
+            left: 0;
+            color: #A1A1A1;
+
+            .acme-footer {
+                font-size: 12px;
+                line-height: 17px;
+            }
+
+            .Terms-and-privacy {
+                font-size: 12px;
+                line-height: 15px;
+                margin: 0 0 0 10px;
+                cursor: pointer;
+            }
+
+            .Terms-dots {
+                margin-left: 10px;
+                letter-spacing: 3px;
+                font-size: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .right-side {
+        width: 50vw;
+        float: right;
+        overflow: hidden;
+        position: relative;
+
+        .text-box {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            width: 350px;
+            height: 450px;
+
+            .right-side-text-h2 {
+                font-size: 30px;
+                line-height: 44px;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+
+            .right-side-text-h4 {
+                font-size: 14px;
+                line-height: 30px;
+                font-weight: 400;
+                line-height: 2;
+            }
+
+            .login-btn {
+                margin-top: 10px;
+                padding: 10px 30px 10px 30px;
+                border-radius: 4px;
+                border: 2px solid #ffffff;
+                background: transparent;
+                color: #ffffff;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .login-btn:hover {
+                background-color: #4A90E2;
+            }
+
+            .login-btn:active {
+                background-color: #2269b9;
+            }
+
+            .acme-img {
+                margin-bottom: 50px;
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 838px) {
+    .page-container {
+        display: flex;
+        flex-direction: column;
+
+        .left-side {
+            float: none;
+            height: 85vh;
+            width: 100%;
+            order: 1;
+
+
+            .form-container {
+                position: relative;
+                top: 250px;
+                left: 50%;
+            }
+        }
+
+        .right-side {
+            float: none;
+            width: 100%;
+            height: 60vh;
+
+            .text-box {
+                top: 55%;
+            }
+        }
+    }
+}
