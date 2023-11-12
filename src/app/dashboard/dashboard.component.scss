@@ -265,7 +265,7 @@
         .left-side {
             float: none;
             height: 85vh;
-            width: 100%;
+            width: 100vw;
             order: 1;
 
 
@@ -278,11 +278,42 @@
 
         .right-side {
             float: none;
-            width: 100%;
+            width: 100vw;
             height: 60vh;
 
             .text-box {
                 top: 55%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .page-container {
+        display: flex;
+        flex-direction: column;
+
+        .left-side {
+            float: none;
+            height: 85vh;
+            width: 100%;
+            order: 1;
+
+
+            .form-container {
+                position: relative;
+                top: 250px;
+                width: 80vw;
+            }
+        }
+
+        .right-side {
+            float: none;
+            width: 100vw;
+            height: 60vh;
+
+            .text-box {
+                top: 65%;
             }
         }
     }
